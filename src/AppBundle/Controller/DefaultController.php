@@ -6,18 +6,13 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
-class DefaultController extends Controller
+class TestController extends Controller
 {
     /**
-     * @Route("/", name="homepage")
+     * @Route("test", name="homepage")
      */
-    public function indexAction(Request $request)
-    {
-        // replace this example code with whatever you need
-        return $this->render('/home/alex/repository/WowChecker/app');
+    public function ramdomNumber(){
+        $number = mt_rand(0, 10);
+            '<html><body>Lucky number: '.$number.'</body></html>'
     }
 }
-
-
-
-// default/index.html.twig
